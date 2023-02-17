@@ -56,9 +56,14 @@ public class MySinglyLinkedList {
 
     void addFirst(int data) {
         Node node = new Node(data);
-        if (head == null) head = node;
-        node.next = head;
-        head = node;
+        if (head == null) {
+            head = tail=node;
+        } else {
+            node.next = head;
+            head = node;
+        }
+
+        size++;
     }
 
     int returnKthFromLast(int k) {
