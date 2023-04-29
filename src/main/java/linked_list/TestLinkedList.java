@@ -21,6 +21,8 @@ public class TestLinkedList {
 
         mySinglyLinkedList.deleteById(3);
         mySinglyLinkedList.printLinkedList();
+
+        System.out.println(mySinglyLinkedList.indexOf(1));
     }
 
 
