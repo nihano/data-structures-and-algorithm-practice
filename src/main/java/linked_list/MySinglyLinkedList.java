@@ -31,22 +31,38 @@ public class MySinglyLinkedList {
         Node current = head;
         Node prev = head;
         if (isEmpty()) System.out.println("List is empty");
-        while (current!=null){
-            if (current.data==data){
-                if (current==head){
-                    head=current.next;
-                    current.next=null;
-                }else if(current==tail){
-                    tail=prev;
-                    prev.next=null;
-                }else {
-                    prev.next=current.next;
-                    current.next=null;
+        while (current != null) {
+            if (current.data == data) {
+                if (current == head) {
+                    head = current.next;
+                    current.next = null;
+                } else if (current == tail) {
+                    tail = prev;
+                    prev.next = null;
+                } else {
+                    prev.next = current.next;
+                    current.next = null;
                 }
             }
-            prev=current;
-            current=current.next;
+            prev = current;
+            current = current.next;
         }
+    }
+
+    int indexOf(int data) {
+        Node current = head;
+        int position = 0;
+        if (isEmpty()) return -1;
+        while (current != null) {
+            if (current.data == data) {
+                return position;
+            }
+            position++;
+            current = current.next;
+        }
+
+        return -1;
+
     }
 
 
