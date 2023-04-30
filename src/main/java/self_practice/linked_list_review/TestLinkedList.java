@@ -28,7 +28,7 @@ public class TestLinkedList {
         mySinglyLinkedList.printLinkedList();
 
         long numberOfOperations = 0;
-        int n = 10000000; //size of data
+        int n = 1000000; //size of data
         int m = 500;
         long startTime;
         long endTime;
@@ -48,18 +48,31 @@ public class TestLinkedList {
             list2.add(i);
         }
 
+        MySinglyLinkedList list3 = new MySinglyLinkedList();
+        for (int i = 0; i < n; i++) {
+            list3.add(i);
+        }
+
         System.out.println("----------------------");
 
         startTime = System.currentTimeMillis();
-        list.deleteKthItemFromLast(2);
+        list.deleteKthItemFromLast(10);
         endTime = System.currentTimeMillis();
         System.out.println("method 1: "+ (endTime-startTime) + " miliseconds");
 
 
         startTime = System.currentTimeMillis();
-        list2.removeKthFromLast2(2);
+        list2.removeKthFromLast2(10);
         endTime = System.currentTimeMillis();
         System.out.println("method 2: "+ (endTime-startTime) + " miliseconds");
+
+        startTime = System.currentTimeMillis();
+        list3.removeKthFromLast2(10);
+        endTime = System.currentTimeMillis();
+        System.out.println("method 3: "+ (endTime-startTime) + " miliseconds");
+//        list.printLinkedList();
+//        list2.printLinkedList();
+//        list3.printLinkedList();
 
 
     }

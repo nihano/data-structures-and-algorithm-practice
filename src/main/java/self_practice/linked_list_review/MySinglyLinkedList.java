@@ -125,6 +125,7 @@ public class MySinglyLinkedList {
 
             if (ptr2 == null) System.out.println("Less than k elements");
 
+
             else if (ptr2.next == null) {
                 head = ptr1.next;
                 ptr1.next = null;
@@ -140,6 +141,28 @@ public class MySinglyLinkedList {
         ptr1.next = ptr1.next.next;
         ptr1 = ptr1.next;
         ptr1 = null;
+    }
+
+
+    void deleteKthItemFromLast3(int k) {
+        Node p1 = head;
+        Node p2 = head;
+        for (int i = 0; i < k; i++) {
+            p2 = p2.next;
+            if (p2 == null) System.out.println("Less than K elements");
+            else if (p2.next.next == null) {
+                head = p1.next;
+                p1.next = null;
+                size--;
+            }
+        }
+        while (p2.next != null) {
+            p2 = p2.next;
+            p1 = p1.next;
+        }
+        p1.next = p1.next.next;
+        p1.next = null;
+        size--;
     }
 
 
