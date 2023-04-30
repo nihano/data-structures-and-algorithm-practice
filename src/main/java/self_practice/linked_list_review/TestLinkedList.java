@@ -27,15 +27,39 @@ public class TestLinkedList {
         mySinglyLinkedList.addFirst(1);
         mySinglyLinkedList.printLinkedList();
 
+        long numberOfOperations = 0;
+        int n = 10000000; //size of data
+        int m = 500;
+        long startTime;
+        long endTime;
+        System.out.println("Input size n is = " + n);
         MySinglyLinkedList list = new MySinglyLinkedList();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < n; i++) {
             list.add(i);
         }
-        list.printLinkedList();
-        System.out.println(list.getKthItemFromLast(4));
+//        list.printLinkedList();
+//        System.out.println(list.getKthItemFromLast(3));
+//
+//        list.deleteKthItemFromLast(1);
+//        list.printLinkedList();
 
+        MySinglyLinkedList list2 = new MySinglyLinkedList();
+        for (int i = 0; i < n; i++) {
+            list2.add(i);
+        }
+
+        System.out.println("----------------------");
+
+        startTime = System.currentTimeMillis();
         list.deleteKthItemFromLast(2);
-        list.printLinkedList();
+        endTime = System.currentTimeMillis();
+        System.out.println("method 1: "+ (endTime-startTime) + " miliseconds");
+
+
+        startTime = System.currentTimeMillis();
+        list2.removeKthFromLast2(2);
+        endTime = System.currentTimeMillis();
+        System.out.println("method 2: "+ (endTime-startTime) + " miliseconds");
 
 
     }
