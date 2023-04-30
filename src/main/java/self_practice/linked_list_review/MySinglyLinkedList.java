@@ -74,40 +74,73 @@ public class MySinglyLinkedList {
         size++;
     }
 
-    int getKthItemFromLast(int k){
-        Node p1=head;
-        Node p2=head;
-        for (int i=0; i<k; i++){
-            p2=p2.next;
+    int getKthItemFromLast(int k) {
+        Node p1 = head;
+        Node p2 = head;
+        for (int i = 0; i < k; i++) {
+            p2 = p2.next;
         }
 
-        while (p2!=null){
-            p1=p1.next;
-            p2=p2.next;
+        while (p2 != null) {
+            p1 = p1.next;
+            p2 = p2.next;
         }
         return p1.data;
     }
 
-    void deleteKthItemFromLast(int k){
-        Node p1=head;
-        Node p2=head;
-        Node prev=head;
-        for (int i=0; i<k; i++){
-            p2=p2.next;
+    void deleteKthItemFromLast(int k) {
+        Node p1 = head;
+        Node p2 = head;
+        Node prev = head;
+        for (int i = 0; i < k; i++) {
+            p2 = p2.next;
         }
 
-        while (p2!=null){
-            prev=p1;
-            p1=p1.next;
-            p2=p2.next;
+        while (p2 != null) {
+            prev = p1;
+            p1 = p1.next;
+            p2 = p2.next;
         }
-
-        prev.next=p1.next;
-        p1.next=null;
-
-
+        if (p1 == head) {
+            head = p1.next;
+            p1.next = null;
+            size--;
+        } else if (p1 == tail) {
+            tail = prev;
+            prev.next = null;
+            size--;
+        } else {
+            prev.next = p1.next;
+            p1.next = null;
+            size--;
+        }
     }
 
+    public void removeKthFromLast2(int k) {
+        Node ptr1 = head;
+        Node ptr2 = head;
+        for (int i = 0; i < k - 1; i++) {
+
+            ptr2 = ptr2.next;
+
+            if (ptr2 == null) System.out.println("Less than k elements");
+
+            else if (ptr2.next == null) {
+                head = ptr1.next;
+                ptr1.next = null;
+                return;
+            }
+        }
+        while (ptr2.next.next != null) {
+
+            ptr1 = ptr1.next;
+            ptr2 = ptr2.next;
+
+        }
+        ptr1.next = ptr1.next.next;
+        ptr1 = ptr1.next;
+        ptr1 = null;
+    }
 
 
 //    MySinglyLinkedList reverse(){
