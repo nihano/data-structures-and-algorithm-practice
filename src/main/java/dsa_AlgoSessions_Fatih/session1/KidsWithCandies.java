@@ -8,6 +8,10 @@ public class KidsWithCandies {
         int[] candies = {2,3,5,1,2};
         int extraCandies=3;
 
+        String[] strs = new String[]{"flower","flow","flight"};
+        Arrays.sort(strs);
+        System.out.println(Arrays.toString(strs));
+
         System.out.println(Arrays.toString(kidsWithCandies(candies, extraCandies)));
 
     }
