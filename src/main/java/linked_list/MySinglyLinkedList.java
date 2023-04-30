@@ -60,10 +60,52 @@ public class MySinglyLinkedList {
             position++;
             current = current.next;
         }
-
         return -1;
-
     }
+
+    void addFirst(int data) {
+        Node node = new Node(data);
+        if (isEmpty()) {
+            head = tail = node;
+        } else {
+            node.next = head;
+            head = node;
+        }
+        size++;
+    }
+
+    int getKthItemFromLast(int k){
+        Node p1=head;
+        Node p2=head;
+        for (int i=0; i<k; i++){
+            p2=p2.next;
+        }
+
+        while (p2!=null){
+            p1=p1.next;
+            p2=p2.next;
+        }
+        return p1.data;
+    }
+
+
+
+
+//    MySinglyLinkedList reverse(){
+//        MySinglyLinkedList newList = new MySinglyLinkedList();
+//        Node prev=head;
+//        Node current=head;
+//        while (current!=null){
+//            if (current==tail){
+//                newList.head=current;
+//                tail=prev;
+//                prev.next=null;
+//            }
+//            prev=current;
+//            current=current.next;
+//        }
+//        return newList;
+//    }
 
 
 }
