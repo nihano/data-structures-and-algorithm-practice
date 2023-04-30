@@ -88,6 +88,25 @@ public class MySinglyLinkedList {
         return p1.data;
     }
 
+    void deleteKthItemFromLast(int k){
+        Node p1=head;
+        Node p2=head;
+        Node prev=head;
+        for (int i=0; i<k; i++){
+            p2=p2.next;
+        }
+
+        while (p2!=null){
+            prev=p1;
+            p1=p1.next;
+            p2=p2.next;
+        }
+
+        prev.next=p1.next;
+        p1.next=null;
+
+
+    }
 
 
 
