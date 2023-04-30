@@ -1,4 +1,4 @@
-package linked_list;
+package self_practice.linked_list_review;
 
 public class Node {
     int data;
