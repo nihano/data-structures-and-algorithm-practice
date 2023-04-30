@@ -57,12 +57,11 @@ public class MySinglyLinkedList {
     void addFirst(int data) {
         Node node = new Node(data);
         if (head == null) {
-            head = tail=node;
+            head = tail = node;
         } else {
             node.next = head;
             head = node;
         }
-
         size++;
     }
 
@@ -108,6 +107,23 @@ public class MySinglyLinkedList {
         }
 
     }
+
+    void removeKthItem2(int k) {
+        Node ptr1 = head;
+        Node ptr2 = head;
+
+        for (int i = 0; i < k; i++) {
+            ptr2 = ptr2.next;
+        }
+
+        while (ptr2 != null) {
+            ptr1 = ptr1.next;
+            ptr2 = ptr2.next;
+        }
+    }
+
+
+
 
 
 }
