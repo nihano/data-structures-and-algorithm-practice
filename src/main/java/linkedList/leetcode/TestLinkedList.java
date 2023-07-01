@@ -17,9 +17,10 @@ public class TestLinkedList {
         System.out.println(linkedList.tail.value);
         System.out.println(linkedList.findKthFromLast(2));
         System.out.println(linkedList.getKthItemFromLast(2));
-        linkedList.deleteKthItemFromLast(1);
+        linkedList.deleteKthItemFromLast(10);
         linkedList.printNodes();
         System.out.println(linkedList.tail.value);
+        linkedList.printNodes();
 
 
 

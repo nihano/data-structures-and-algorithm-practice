@@ -119,6 +119,10 @@ public class MySinglyLinkedList {
         Node fast = head;
         Node prev = head;
         for (int i = 0; i < k; i++) {
+            if (fast == null) {
+                System.out.println("less than k elements");
+                return;
+            }
             fast = fast.next;
         }
         while (fast != null) {
@@ -128,8 +132,8 @@ public class MySinglyLinkedList {
         }
 
         if (slow == head) {
-            head=slow.next;
-            slow.next=null;
+            head = slow.next;
+            slow.next = null;
             size--;
         } else if (slow == tail) {
             tail = prev;
