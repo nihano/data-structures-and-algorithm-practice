@@ -83,7 +83,7 @@ public class MySinglyLinkedList {
         move fast k times
         move both one time
         when fast hit null slow will be on the kth element from last
-        while fast.next.next!=null
+        while fast!=null
          */
 
         Node slow = head;
