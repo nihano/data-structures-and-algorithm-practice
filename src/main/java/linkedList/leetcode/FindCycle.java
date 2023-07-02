@@ -12,7 +12,7 @@ public class FindCycle {
        node1.next=node2;
        node2.next=node3;
        node3.next=node4;
-       node4.next=node2;
+       node4.next=null;
 
         System.out.println(findCycle(node1));
     }
@@ -21,9 +21,18 @@ public class FindCycle {
         HashSet<Node> set = new HashSet<>();
         Node current=node;
         while (current!=null){
-            if (!set.add(current)) {
-                return true;
-            }
+            if (!set.add(current)) return true;
+            current=current.next;
+        }
+        return false;
+    }
+
+    static boolean hasCycle(Node head){
+        HashSet<Node> visited = new HashSet<>();
+        Node current=head;
+        while (current!=null){
+            if (visited.contains(current)) return true;
+            visited.add(current);
             current=current.next;
         }
         return false;
