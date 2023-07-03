@@ -21,6 +21,11 @@ public class Main {
         List<Apple> heavyApples = findApples(apples, new HeavyPredicate());
         System.out.println(greenApples);
         System.out.println(heavyApples);
+
+        List<Apple> greenApplesLambda = findApples(apples, apple -> apple.getColor().equalsIgnoreCase("green"));
+        List<Apple> heavyApplesLambda = findApples(apples, apple -> apple.getWeight()>200);
+        System.out.println(greenApplesLambda);
+
     }
 
     public static List<Apple> findApples(List<Apple> apples, Predicate<Apple> p){
