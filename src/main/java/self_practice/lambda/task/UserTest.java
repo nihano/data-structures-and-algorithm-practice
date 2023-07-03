@@ -17,6 +17,8 @@ public class UserTest {
         System.out.println("************");
         Predicate<User> predicate2 = p->true;
         printName(users, predicate2);
+        System.out.println("************");
+        users.forEach(p-> System.out.println(p.getFirstName()));
 
     }
 
