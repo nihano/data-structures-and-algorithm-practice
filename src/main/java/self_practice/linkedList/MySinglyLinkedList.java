@@ -1,6 +1,4 @@
-package linkedList.leetcode;
-
-import java.util.NoSuchElementException;
+package self_practice.linkedList;
 
 public class MySinglyLinkedList {
     Node head;
