@@ -1,4 +1,4 @@
-package linkedList.leetcode;
+package self_practice.linkedList;
 
 public class Node {
     int value;
