@@ -16,9 +16,7 @@ public class SunsetViews {
         for (int i = 0; i < buildingHeights.length; i++) {
             int max=0;
             for (int j = i+1; j < buildingHeights.length; j++) {
-                if (buildingHeights[j]>max){
-                    max=buildingHeights[j];
-                }
+                if (buildingHeights[j]>max) max=buildingHeights[j];
             }
             if (buildingHeights[i]>max){
                 list.add(i);
