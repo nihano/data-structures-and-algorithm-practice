@@ -1,4 +1,4 @@
-package week28_Algo_Questions;
+package mentor_sessions.week28_Algo_Questions;
 
 public class LengthOfLastWord2 {
     public static void main(String[] args) {

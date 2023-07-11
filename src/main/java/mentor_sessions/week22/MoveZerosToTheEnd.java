@@ -1,4 +1,4 @@
-package week22;
+package mentor_sessions.week22;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package week34;
+package mentor_sessions.week34;
 
 import java.util.*;
 

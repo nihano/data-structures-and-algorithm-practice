@@ -1,4 +1,4 @@
-package week28_Algo_Questions;
+package mentor_sessions.week28_Algo_Questions;
 
 import java.util.HashMap;
 import java.util.Map;
