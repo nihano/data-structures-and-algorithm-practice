@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class FindCommonCharacters {
+public class _1002_FindCommonCharacters {
     public static void main(String[] args) {
         String[] A = new String[]{"bella", "label", "roller"};
         System.out.println(commonChars(A));

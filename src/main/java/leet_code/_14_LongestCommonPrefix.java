@@ -1,6 +1,6 @@
 package leet_code;
 
-public class LongestCommonPrefix {
+public class _14_LongestCommonPrefix {
 
     public static void main(String[] args) {
         String[] strs = new String[]{"flower", "flow", "flight"};

@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class FindCommonCharactersMine {
+public class _1002_FindCommonCharactersMine {
 
     public static void main(String[] args) {
         String[] words = new String[]{"cool","lock","cook"};

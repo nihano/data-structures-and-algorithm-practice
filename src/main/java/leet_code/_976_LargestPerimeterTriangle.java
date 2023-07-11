@@ -2,7 +2,7 @@ package leet_code;
 
 import java.util.Arrays;
 
-public class LargestPerimeterTriangle {
+public class _976_LargestPerimeterTriangle {
 
     public static void main(String[] args) {
         int[] arr = new int[]{3,6,2,3};
