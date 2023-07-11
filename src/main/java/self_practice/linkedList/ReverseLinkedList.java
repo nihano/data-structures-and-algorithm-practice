@@ -1,4 +1,4 @@
-package linkedList.leetcode;
+package self_practice.linkedList;
 
 public class ReverseLinkedList {
     public static void main(String[] args) {
