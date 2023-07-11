@@ -1,4 +1,4 @@
-package lambdaExp;
+package self_practice.lambdaExp;
 
 import java.util.function.Predicate;
 
