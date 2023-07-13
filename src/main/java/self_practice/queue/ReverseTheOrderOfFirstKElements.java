@@ -1,6 +1,5 @@
 package self_practice.queue;
 
-import java.util.Map;
 import java.util.Stack;
 
 public class ReverseTheOrderOfFirstKElements {

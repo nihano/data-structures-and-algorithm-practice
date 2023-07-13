@@ -1,8 +1,6 @@
 package self_practice.stack_Practice;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
 
 public class SunsetViewsOptimized {
     public static void main(String[] args) {

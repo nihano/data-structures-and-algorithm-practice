@@ -1,8 +1,6 @@
 package self_practice.lambda.prettyPrintOrangeTask;
 
 import self_practice.lambda.Color;
-import self_practice.lambda.prettyPrintOrangeTask.Orange;
-import self_practice.lambda.prettyPrintOrangeTask.OrangeFormatter;
 
 import java.util.ArrayList;
 import java.util.List;

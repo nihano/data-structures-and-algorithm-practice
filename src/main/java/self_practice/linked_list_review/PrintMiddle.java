@@ -1,10 +1,5 @@
 package self_practice.linked_list_review;
 
-import self_practice.stack_Practice.MyStack;
-
-import java.util.HashMap;
-import java.util.Map;
-
 public class PrintMiddle {
     public static void main(String[] args) {
         MySinglyLinkedList list = new MySinglyLinkedList();
