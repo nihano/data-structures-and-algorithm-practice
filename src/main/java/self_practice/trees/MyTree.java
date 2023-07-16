@@ -37,8 +37,24 @@ public class MyTree {
     //Root-Left-Right
     void preOrderTraversal(TNode root){
         if (root==null) return;
-        System.out.println(root.value);
+        System.out.print(root.value +", ");
         preOrderTraversal(root.leftChild);
         preOrderTraversal(root.rightChild);
     }
+
+    //inOrder Traversal of the tree
+    //Left-Root-Right
+    void inOrderTraversal(TNode root){
+        if (root==null) return;
+        inOrderTraversal(root.leftChild);
+        System.out.print(root.value +", ");
+        inOrderTraversal(root.rightChild);
+    }
+    void postOrderTraversal(TNode root){
+        if (root==null) return;
+        postOrderTraversal(root.leftChild); //1
+        System.out.println(root.value);
+        System.out.println();
+    }
+
 }
