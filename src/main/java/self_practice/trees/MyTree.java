@@ -1,5 +1,8 @@
 package self_practice.trees;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class MyTree {
     TNode root;
 
@@ -51,10 +54,34 @@ public class MyTree {
         inOrderTraversal(root.rightChild);
     }
     void postOrderTraversal(TNode root){
-        if (root==null) return;
-        postOrderTraversal(root.leftChild); //1
-        System.out.println(root.value);
-        System.out.println();
+        if (root==null) return;// termination
+        postOrderTraversal(root.leftChild); // branch and finish left subtree
+        postOrderTraversal(root.rightChild); // branch and finish right subtree
+        System.out.print(root.value+", ");  // visit root
+    }
+    void levelOrderTraversal(){
+        if(root==null) return;
+        Queue<TNode> queue=new LinkedList<>();
+        queue.add(root); //10
+        while(!queue.isEmpty()){
+            TNode toVisit=queue.poll(); //10,6,20,4,8,17,42,5,9,29
+            System.out.print(toVisit.value+", ");//10, 6,20,4,8,17,42,5,9,29
+            //29->47
+            if (toVisit.leftChild!=null) queue.add(toVisit.leftChild);
+            if (toVisit.rightChild!=null) queue.add(toVisit.rightChild);
+        }
+        /*
+        print=>10,6,20
+              .----10-------.
+              |             |
+          .---6--.       .--20---.
+          |      |       |       |
+          4-.    8-.     17   .-42-.
+            |      |          |    |
+            5      9          29   47
+
+
+         */
     }
 
 }
