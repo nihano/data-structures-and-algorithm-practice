@@ -70,7 +70,7 @@ public class MyTree {
             if (toVisit.leftChild!=null) queue.add(toVisit.leftChild);
             if (toVisit.rightChild!=null) queue.add(toVisit.rightChild);
         }
-        /*
+           /*
         print=>10,6,20
               .----10-------.
               |             |
@@ -83,5 +83,6 @@ public class MyTree {
 
          */
     }
+
 
 }
