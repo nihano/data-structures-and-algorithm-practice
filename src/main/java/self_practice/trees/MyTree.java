@@ -1,5 +1,6 @@
 package self_practice.trees;
 
+import javax.naming.PartialResultException;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -35,6 +36,7 @@ public class MyTree {
             }
         }
     }
+
 
     //PreOrder Traversal of the tree
     //Root-Left-Right
@@ -103,35 +105,33 @@ public class MyTree {
         return (int) (Math.pow(2, height) - 1);
     }
 
-    /*TRIED MYSELF
-    boolean contains(int value) {
+    //TRIED MYSELF
+    boolean contains1(int value) {
         if (root == null) return false;
         TNode current = root;
-        if (root.value == value) return true;
-        while (value < current.value) {
-            if (current.leftChild != null) {
+        while (current != null) {
+            if (current.value == value) return true;
+            if (value < current.value) {
                 current = current.leftChild;
-                if (current.value == value) {
-                    return true;
-                }
-            }else{
-                break;
-            }
-        }
-
-        while (value > current.value) {
-            if (current.rightChild != null) {
+            } else if (value > current.value) {
                 current = current.rightChild;
-                if (current.value == value) {
-                    return true;
-                }
-            }else{
-                break;
             }
         }
         return false;
     }
-     */
 
-
+    //BETTER VERSION :)
+    boolean contains(int value) {
+        if (root == null) return false;
+        TNode current = root;
+        while (current != null) {
+            if (value < current.value) current = current.leftChild;
+            else if (value > current.value) current = current.rightChild;
+            else return true;
+        }
+        return false;
+    }
 }
+
+
+
