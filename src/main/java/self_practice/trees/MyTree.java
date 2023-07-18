@@ -9,66 +9,68 @@ public class MyTree {
     public MyTree() {
     }
 
-    void insert(int value){
+    void insert(int value) {
         TNode newNode = new TNode(value);
-        if (root==null) {
-            root=newNode;
+        if (root == null) {
+            root = newNode;
             return;
         }
         TNode current = root;
-        while (true){
-            if (value<=current.value){
-                if (current.leftChild==null){
+        while (true) {
+            if (value <= current.value) {
+                if (current.leftChild == null) {
                     //if left is null insert there
-                    current.leftChild=newNode;
+                    current.leftChild = newNode;
                     break;
                 }
                 //if current is not null (there is a node in the left) jump to that node
-                current=current.leftChild;
-            }
-            else {
-                if (current.rightChild==null){
+                current = current.leftChild;
+            } else {
+                if (current.rightChild == null) {
                     //if right is null insert there
-                    current.rightChild=newNode;
+                    current.rightChild = newNode;
                     break;
                 }
-                current=current.rightChild;
+                current = current.rightChild;
             }
         }
     }
+
     //PreOrder Traversal of the tree
     //Root-Left-Right
-    void preOrderTraversal(TNode root){
-        if (root==null) return;
-        System.out.print(root.value +", ");
+    void preOrderTraversal(TNode root) {
+        if (root == null) return;
+        System.out.print(root.value + ", ");
         preOrderTraversal(root.leftChild);
         preOrderTraversal(root.rightChild);
     }
 
     //inOrder Traversal of the tree
     //Left-Root-Right
-    void inOrderTraversal(TNode root){
-        if (root==null) return;
+    void inOrderTraversal(TNode root) {
+        if (root == null) return;
         inOrderTraversal(root.leftChild);
-        System.out.print(root.value +", ");
+        System.out.print(root.value + ", ");
         inOrderTraversal(root.rightChild);
     }
-    void postOrderTraversal(TNode root){
-        if (root==null) return;// termination
+
+    void postOrderTraversal(TNode root) {
+        if (root == null) return;// termination
         postOrderTraversal(root.leftChild); // branch and finish left subtree
         postOrderTraversal(root.rightChild); // branch and finish right subtree
-        System.out.print(root.value+", ");  // visit root
+        System.out.print(root.value + ", ");  // visit root
     }
-    void levelOrderTraversal(){
-        if(root==null) return;
-        Queue<TNode> queue=new LinkedList<>();
+
+    void levelOrderTraversal() {
+        if (root == null) return;
+        Queue<TNode> queue = new LinkedList<>();
         queue.add(root); //10
-        while(!queue.isEmpty()){
-            TNode toVisit=queue.poll(); //10,6,20,4,8,17,42,5,9,29
-            System.out.print(toVisit.value+", ");//10, 6,20,4,8,17,42,5,9,29
+        while (!queue.isEmpty()) {
+            TNode toVisit = queue.poll(); //10,6,20,4,8,17,42,5,9,29
+            System.out.print(toVisit.value + ", ");//10, 6,20,4,8,17,42,5,9,29
             //29->47
-            if (toVisit.leftChild!=null) queue.add(toVisit.leftChild);
-            if (toVisit.rightChild!=null) queue.add(toVisit.rightChild);
+            if (toVisit.leftChild != null) queue.add(toVisit.leftChild);
+            if (toVisit.rightChild != null) queue.add(toVisit.rightChild);
         }
            /*
         print=>10,6,20
@@ -83,6 +85,53 @@ public class MyTree {
 
          */
     }
+
+    //only for full binary tree, just practicing
+    //no condition to check if it's FBT
+    public int numberOfNodesFBT(TNode root) {
+        TNode curr = root;
+        int height = 0;
+        while (true) {
+            if (root == null) return 0;
+            if (curr != null) {
+                curr = curr.leftChild;
+                height++;
+            } else {
+                break;
+            }
+        }
+        return (int) (Math.pow(2, height) - 1);
+    }
+
+    /*TRIED MYSELF
+    boolean contains(int value) {
+        if (root == null) return false;
+        TNode current = root;
+        if (root.value == value) return true;
+        while (value < current.value) {
+            if (current.leftChild != null) {
+                current = current.leftChild;
+                if (current.value == value) {
+                    return true;
+                }
+            }else{
+                break;
+            }
+        }
+
+        while (value > current.value) {
+            if (current.rightChild != null) {
+                current = current.rightChild;
+                if (current.value == value) {
+                    return true;
+                }
+            }else{
+                break;
+            }
+        }
+        return false;
+    }
+     */
 
 
 }
