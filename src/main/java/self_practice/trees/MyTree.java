@@ -131,6 +131,18 @@ public class MyTree {
         }
         return false;
     }
+
+    boolean isLeaf(TNode node){
+       return node.leftChild==null && node.rightChild==null;
+    }
+    void printLeaves(TNode root){
+        if (root==null) return;
+        if (isLeaf(root)) System.out.println(root.value);
+        printLeaves(root.leftChild);
+        printLeaves(root.rightChild);
+    }
+
+
 }
 
 
