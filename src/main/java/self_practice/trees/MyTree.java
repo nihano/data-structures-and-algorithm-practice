@@ -135,6 +135,8 @@ public class MyTree {
     boolean isLeaf(TNode node){
        return node.leftChild==null && node.rightChild==null;
     }
+
+    //You can do thi in any order pre, inorder, postorder or level order
     void printLeaves(TNode root){
         if (root==null) return;
         if (isLeaf(root)) System.out.println(root.value);
