@@ -105,7 +105,7 @@ public class MyTree {
         return (int) (Math.pow(2, height) - 1);
     }
 
-    //TRIED MYSELF
+    //TRIED MYSELF, could be also used for double values?
     boolean contains1(int value) {
         if (root == null) return false;
         TNode current = root;
