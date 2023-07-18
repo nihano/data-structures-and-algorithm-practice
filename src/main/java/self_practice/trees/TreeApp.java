@@ -29,8 +29,11 @@ public class TreeApp {
 
         MyTree emptyTree = new MyTree();
 
+        System.out.println(tree.contains1(42));
+        System.out.println(tree.contains(42));
 
-//        System.out.println(emptyTree.contains(1));
+        tree.printLeaves(tree.root);
+
     }
 
 }
