@@ -144,6 +144,12 @@ public class MyTree {
         printLeaves(root.rightChild);
     }
 
+    int countLeaves(TNode root){
+        if (root==null) return 0;
+        if (isLeaf(root)) return 1;
+        return countLeaves(root.leftChild) +countLeaves(root.rightChild);
+    }
+
 
 }
 
