@@ -150,6 +150,12 @@ public class MyTree {
         return countLeaves(root.leftChild) +countLeaves(root.rightChild);
     }
 
+    int findSumOfLeaves(TNode root){
+        if (root==null) return 0;
+        if (isLeaf(root)) return root.value;
+        return findSumOfLeaves(root.leftChild) +findSumOfLeaves(root.rightChild);
+    }
+
 
 }
 
