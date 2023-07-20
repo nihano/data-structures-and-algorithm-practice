@@ -36,6 +36,8 @@ public class TreeApp {
 
         System.out.println("number of leaves: " +tree.countLeaves(tree.root));
         System.out.println("sum of leaves: " +tree.findSumOfLeaves(tree.root));
+        System.out.println("max height: " +tree.height(tree.root));
+
     }
 
 }
