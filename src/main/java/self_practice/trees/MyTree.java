@@ -132,45 +132,51 @@ public class MyTree {
         return false;
     }
 
-    boolean isLeaf(TNode node){
-       return node.leftChild==null && node.rightChild==null;
+    boolean isLeaf(TNode node) {
+        return node.leftChild == null && node.rightChild == null;
     }
 
     //You can do thi in any order pre, inorder, postorder or level order
-    void printLeaves(TNode root){
-        if (root==null) return;
+    void printLeaves(TNode root) {
+        if (root == null) return;
         if (isLeaf(root)) System.out.println(root.value);
         printLeaves(root.leftChild);
         printLeaves(root.rightChild);
     }
 
-    int countLeaves(TNode root){
-        if (root==null) return 0;
+    int countLeaves(TNode root) {
+        if (root == null) return 0;
         if (isLeaf(root)) return 1;
-        return countLeaves(root.leftChild) +countLeaves(root.rightChild);
+        return countLeaves(root.leftChild) + countLeaves(root.rightChild);
     }
 
-    int findSumOfLeaves(TNode root){
-        if (root==null) return 0;
+    int findSumOfLeaves(TNode root) {
+        if (root == null) return 0;
         if (isLeaf(root)) return root.value;
-        return findSumOfLeaves(root.leftChild) +findSumOfLeaves(root.rightChild);
+        return findSumOfLeaves(root.leftChild) + findSumOfLeaves(root.rightChild);
     }
 
-    int height(TNode root){
-        if (root==null) return -1;
+    int height(TNode root) {
+        if (root == null) return -1;
         if (isLeaf(root)) return 0;
         return 1 + Math.max(height(root.leftChild), height(root.rightChild));
     }
 
-    public int calculateNodeDepthSums(){
+    public int calculateNodeDepthSums() {
         return nodeDepthSums(root, 0);
     }
 
-    int nodeDepthSums(TNode node, int A){
-        if (node==null) return 0;
-       return  A +nodeDepthSums(node.leftChild,A+1) +nodeDepthSums(node.rightChild,A+1);
+    int nodeDepthSums(TNode node, int A) {
+        if (node == null) return 0;
+        return A + nodeDepthSums(node.leftChild, A + 1) + nodeDepthSums(node.rightChild, A + 1);
     }
 
+    int nodeSums(TNode root) {
+        if (root==null) return 0;
+        int value=root.value;
+        return value + nodeSums(root.leftChild) +nodeSums(root.rightChild);
+
+    }
 
 }
 
