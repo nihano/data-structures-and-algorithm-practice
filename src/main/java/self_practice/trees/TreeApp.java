@@ -41,6 +41,7 @@ public class TreeApp {
 
         System.out.println(tree.calculateNodeDepthSums());
 
+        System.out.println(tree.nodeSums(tree.root));
     }
 
 }
