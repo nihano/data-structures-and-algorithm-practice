@@ -1,6 +1,7 @@
 package self_practice.trees;
 
 import javax.naming.PartialResultException;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.Queue;
 
