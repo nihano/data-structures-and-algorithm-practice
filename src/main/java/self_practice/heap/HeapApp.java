@@ -1,5 +1,8 @@
 package self_practice.heap;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class HeapApp {
     public static void main(String[] args) {
         MyHeap heap=new MyHeap(10);
@@ -9,6 +12,9 @@ public class HeapApp {
         heap.insert(45);
         heap.insert(81);
         heap.printHeap();
-
+        System.out.println(heap.size);
+        System.out.println(heap.length());
+        System.out.println(heap);
+        System.out.println(Arrays.toString(heap.items));
     }
 }
