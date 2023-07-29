@@ -1,5 +1,6 @@
 package self_practice.heap;
 
+import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 public class MyHeap {
@@ -51,5 +52,17 @@ public class MyHeap {
             System.out.print(items[i]+", ");
         }
         System.out.println();
+    }
+
+    public int length(){
+        return items.length;
+    }
+
+    @Override
+    public String toString() {
+        return "MyHeap{" +
+                "items=" + Arrays.toString(items) +
+                ", size=" + size +
+                '}';
     }
 }
