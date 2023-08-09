@@ -12,11 +12,10 @@ public class _1399_Count_Largest_Group {
 
     public static int countLargestGroup(int n) {
         //1,2,3, 24
-
         //[sum of digits, frequency]
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 1; i <= n; i++) {
-            int sumOfDigits = sumOfDigits(i);
+            int sumOfDigits = sumOfDigitsIterative(i);
             if (map.containsKey(sumOfDigits)) {
                 map.put(sumOfDigits, (map.get(sumOfDigits) + 1));
             } else {
@@ -53,6 +52,15 @@ public class _1399_Count_Largest_Group {
         //1/10=0 ==>0
         if (n == 0) return 0;
         return n % 10 + sumOfDigits(n / 10);
+    }
+
+    public static int sumOfDigitsIterative(int n) {
+        int sum=0;
+        while(n!=0){
+            sum+=n%10;
+            n=n/10;
+        }
+        return sum;
     }
 
 }
