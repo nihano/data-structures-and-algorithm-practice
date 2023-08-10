@@ -1,27 +1,34 @@
 package leet_code;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 public class _1399_Count_Largest_Group {
 
 
     public static void main(String[] args) {
-        int n = 13;
+        int n = 10000;
         System.out.println(countLargestGroup(n));
     }
 
     public static int countLargestGroup(int n) {
-        //1,2,3, 24
+        //1,2,3, 24,....9999, 10000
         //[sum of digits, frequency]
         HashMap<Integer, Integer> map = new HashMap<>();
+        Set<Integer> check = new HashSet<>();
         for (int i = 1; i <= n; i++) {
             int sumOfDigits = sumOfDigitsIterative(i);
+            check.add(sumOfDigits);
             if (map.containsKey(sumOfDigits)) {
                 map.put(sumOfDigits, (map.get(sumOfDigits) + 1));
             } else {
                 map.put(sumOfDigits, 1);
             }
+
         }
+
+        System.out.println(check);
         int maxFrequency = Integer.MIN_VALUE;
         for (Integer value : map.values()) {
             if (value > maxFrequency) {
