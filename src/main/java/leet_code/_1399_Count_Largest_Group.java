@@ -8,7 +8,7 @@ public class _1399_Count_Largest_Group {
 
 
     public static void main(String[] args) {
-        int n = 10000;
+        int n = 136;
         System.out.println(countLargestGroup(n));
     }
 
@@ -28,7 +28,7 @@ public class _1399_Count_Largest_Group {
 
         }
 
-        System.out.println(check);
+        System.out.println("Total " + check.size() + " groups: " + check);
         int maxFrequency = Integer.MIN_VALUE;
         for (Integer value : map.values()) {
             if (value > maxFrequency) {
