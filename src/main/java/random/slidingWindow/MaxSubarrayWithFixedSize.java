@@ -1,4 +1,4 @@
-package random;
+package random.slidingWindow;
 
 public class MaxSubarrayWithFixedSize {
 
