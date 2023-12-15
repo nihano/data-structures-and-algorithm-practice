@@ -2,29 +2,30 @@ package leet_code;
 
 public class _2038_RemovedColoredPieces {
     public static boolean winnerOfGame(String colors) {
-        int i=0;
-        int count_A=0;
-        int count_B=0;
-        while (i<colors.length()-2){
-            if (colors.substring(i, i+3).equals("AAA")){
-                count_A++;
-            } else if (colors.substring(i, i+3).equals("BBB")) {
-                count_B++;
+        int alice = 0;
+        int bob = 0;
+        int l = 0;
+        for (int r = 0; r < colors.length(); r++) {
+            if (colors.charAt(l) != colors.charAt(r)) {
+                l = r;
             }
-            i++;
+            int extra = r - l + 1 - 2;
+            if (extra > 0) {
+                if (colors.charAt(r) == 'A') {
+                    alice += 1;
+                }
+                if (colors.charAt(r) == 'B') {
+                    bob += 1;
+                }
+            }
         }
-
-        if (count_A<=count_B) return false;
-
-        return true;
-
+        return alice > bob;
     }
-
 
 
     public static void main(String[] args) {
 
-        String colors ="AAA";
+        String colors = "AAA";
         System.out.println(winnerOfGame(colors));
     }
 
