@@ -3,7 +3,9 @@ package self_practice.javaPractice.anonymousClass;
 public class Demo {
     public static void main(String[] args) {
 
+
         A obj = new A() {
+            @Override
             public void show() {
                 System.out.println("in Anonymous show");
             }
@@ -54,6 +56,10 @@ public class Demo {
                 System.out.println("in new config");
             }
         };
+
+        //So actually weather the class is abstract or not the reference type is the Anonymous class
+        obj3.show();
+        obj3.config();
 
     }
 }
