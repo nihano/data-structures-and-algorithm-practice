@@ -1,6 +1,5 @@
 package leet_code;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class _500_KeyboardRow {
@@ -14,7 +13,7 @@ public class _500_KeyboardRow {
         return result.toArray(new String[0]);
     }
 
-    private static int check(char ch) {
+    private static int checkRow(char ch) {
         ch = Character.toLowerCase(ch);
         if ("qwertyuiop".indexOf(ch) != -1) {
             return 1;
@@ -31,9 +30,9 @@ public class _500_KeyboardRow {
             return true;
         }
         Set<Integer> rowSet = new HashSet<>();
-        rowSet.add(check(s.charAt(0)));
+        rowSet.add(checkRow(s.charAt(0)));
         for (int i = 1; i < s.length(); i++) {
-            if (!rowSet.contains(check(s.charAt(i)))) {
+            if (!rowSet.contains(checkRow(s.charAt(i)))) {
                 return false;
             }
         }
