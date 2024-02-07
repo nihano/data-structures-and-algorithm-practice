@@ -1,0 +1,12 @@
+
+CustomerId,TimeStamp,VisitedUrls
+1,2024-02-07 15:30:00,amazon.com
+1,2024-02-07 16:45:00,google.com
+2,2024-02-07 17:00:00,amazon.com
+2,2024-02-07 17:00:00,google.com
+2,2024-02-07 17:00:00,amazon.com
+3,2024-02-07 17:00:00,etsy.com
+3,2024-02-07 17:00:00,amazon.com
+3,2024-02-07 17:00:00,google.com
+3,2024-02-07 17:00:00,google.com
+3,2024-02-07 17:00:00,google.com
