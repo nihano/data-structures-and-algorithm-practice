@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._26_RemoveDuplicatesFromSortedArray;
 
 import java.util.Arrays;
 
