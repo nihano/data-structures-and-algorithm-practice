@@ -1,0 +1,24 @@
+Tree is a naturally recursive structure.
+Requirements: LinkedList, Recursion, Stack, Queue
+
+Represent hierarchical data
+Usage:
+-Database: generally trees are used in databases to access entities faster.
+Otherwise, search start from the beginning and in db there is large size of data.
+-Autocompletion
+-Compilers: compiler needs to check if the written code is compatible with the syntax
+of the language.
+-Compression algorithm (JPEG, MP3)
+
+Tree
+-is a data structure similar to a linked list but instead each node pointing
+simply to the next node in a linear fashion, each node points to a number of nodes.
+-Tree is an example of "non-linear data structure".
+-A tree structure is a way of representing the hierarchical nature of a structure
+in a graphical form.
+
+
+In Linked list we can access the elements starting from the first one in an order
+Nodes in a tree are not in a linear order.
+
+
