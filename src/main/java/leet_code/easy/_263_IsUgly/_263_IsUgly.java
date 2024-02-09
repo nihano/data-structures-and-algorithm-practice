@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._263_IsUgly;
 
 public class _263_IsUgly {
 
