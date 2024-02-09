@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.medium._80_RemoveDuplicatesFromSortedArrayII;
 
 import java.util.Arrays;
 import java.util.List;
