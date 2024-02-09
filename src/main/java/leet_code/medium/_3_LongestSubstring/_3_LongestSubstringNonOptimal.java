@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.medium._3_LongestSubstring;
 
 public class _3_LongestSubstringNonOptimal {
 
