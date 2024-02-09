@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._349_IntersectionOfTwoArrays;
 
 import java.util.*;
 
