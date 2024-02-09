@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._383_Ransom_Note;
 
 import java.util.HashMap;
 import java.util.Map;
