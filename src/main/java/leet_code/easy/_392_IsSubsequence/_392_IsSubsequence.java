@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._392_IsSubsequence;
 
 class _392_IsSubsequence {
     public static void main(String[] args) {
