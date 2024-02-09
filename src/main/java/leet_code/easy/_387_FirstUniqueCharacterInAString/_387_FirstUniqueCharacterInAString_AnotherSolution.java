@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._387_FirstUniqueCharacterInAString;
 
 public class _387_FirstUniqueCharacterInAString_AnotherSolution {
     public static void main(String[] args) {
