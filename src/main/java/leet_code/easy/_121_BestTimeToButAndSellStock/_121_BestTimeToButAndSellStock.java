@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._121_BestTimeToButAndSellStock;
 
 public class _121_BestTimeToButAndSellStock {
     public int maxProfit(int[] prices) {
