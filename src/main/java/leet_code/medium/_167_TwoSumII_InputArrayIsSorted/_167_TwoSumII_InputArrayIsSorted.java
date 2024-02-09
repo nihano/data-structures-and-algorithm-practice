@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.medium._167_TwoSumII_InputArrayIsSorted;
 
 import java.util.Arrays;
 
