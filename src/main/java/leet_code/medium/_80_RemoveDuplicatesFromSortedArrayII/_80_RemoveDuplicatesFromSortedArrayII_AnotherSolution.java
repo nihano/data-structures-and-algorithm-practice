@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.medium._80_RemoveDuplicatesFromSortedArrayII;
 
 public class _80_RemoveDuplicatesFromSortedArrayII_AnotherSolution {
     public static int removeDuplicates(int[] nums) {
