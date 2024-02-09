@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._88_MergeSortedArray;
 
 import java.util.Arrays;
 
