@@ -3,11 +3,16 @@ package self_practice.javaPractice.anonymousClass;
 public class Demo {
     public static void main(String[] args) {
 
+        A object = new A();
+        object.show();
+        A object2 = new B();
+        object.show();
+
 
         A obj = new A() {
             @Override
             public void show() {
-                System.out.println("in Anonymous show");
+                super.show();
             }
         };
 
@@ -42,24 +47,25 @@ public class Demo {
 //            }
 //        };
 
-
         //you can give implementation for more than one method
-
-        AbstractClassA obj3 = new AbstractClassA() {
-            @Override
-            public void show() {
-                System.out.println("in new show");
-            }
-
-            @Override
-            public void config() {
-                System.out.println("in new config");
-            }
-        };
-
-        //So actually weather the class is abstract or not the reference type is the Anonymous class
-        obj3.show();
-        obj3.config();
-
+//
+//        AbstractClassA obj3 = new AbstractClassA() {
+//            @Override
+//            public void show() {
+//                System.out.println("in new show");
+//            }
+//
+//            @Override
+//            public void config() {
+//                System.out.println("in new config");
+//            }
+//        };
+//
+//        //So actually weather the class is abst
+//        obj3.show();
+//        obj3.config();
+//
+//    }
     }
+
 }
