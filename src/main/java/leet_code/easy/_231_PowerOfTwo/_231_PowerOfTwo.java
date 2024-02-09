@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._231_PowerOfTwo;
 
 public class _231_PowerOfTwo {
 
