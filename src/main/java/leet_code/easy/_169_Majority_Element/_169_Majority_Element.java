@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._169_Majority_Element;
 
 import java.util.Arrays;
 
