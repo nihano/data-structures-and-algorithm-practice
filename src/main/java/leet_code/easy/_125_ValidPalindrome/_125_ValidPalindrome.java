@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._125_ValidPalindrome;
 
 public class _125_ValidPalindrome {
     public static void main(String[] args) {
