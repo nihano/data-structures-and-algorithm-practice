@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.medium._3_LongestSubstring;
 
 import com.sun.source.tree.Tree;
 
