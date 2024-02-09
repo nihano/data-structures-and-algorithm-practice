@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._283_MoveZeros;
 
 import java.util.Arrays;
 
