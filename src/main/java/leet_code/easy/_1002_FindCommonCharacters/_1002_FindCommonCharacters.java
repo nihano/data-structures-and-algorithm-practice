@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._1002_FindCommonCharacters;
 
 import java.util.ArrayList;
 import java.util.Arrays;
