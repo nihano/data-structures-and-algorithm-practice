@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._1816_TruncateString;
 
 class _1816_TruncateString {
     public String truncateSentence(String s, int k) {
