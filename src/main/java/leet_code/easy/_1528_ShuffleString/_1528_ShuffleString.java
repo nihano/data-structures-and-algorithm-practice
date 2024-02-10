@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._1528_ShuffleString;
 
 class _1528_ShuffleString {
     public static String restoreString(String s, int[] indices) {
