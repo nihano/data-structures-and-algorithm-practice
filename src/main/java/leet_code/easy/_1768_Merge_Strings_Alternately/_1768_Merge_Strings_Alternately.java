@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._1768_Merge_Strings_Alternately;
 
 public class _1768_Merge_Strings_Alternately {
     public static void main(String[] args) {
