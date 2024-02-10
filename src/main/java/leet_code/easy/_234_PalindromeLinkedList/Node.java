@@ -1,4 +1,4 @@
-package leet_code._234_PalindromeLinkedList;
+package leet_code.easy._234_PalindromeLinkedList;
 
 public class Node {
 
