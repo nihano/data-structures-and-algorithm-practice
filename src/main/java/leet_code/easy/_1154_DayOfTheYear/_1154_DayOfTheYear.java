@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._1154_DayOfTheYear;
 
 class _1154_DayOfTheYear {
 
