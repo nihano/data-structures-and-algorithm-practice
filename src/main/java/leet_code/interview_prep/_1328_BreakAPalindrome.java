@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.interview_prep;
 
 public class _1328_BreakAPalindrome {
 
