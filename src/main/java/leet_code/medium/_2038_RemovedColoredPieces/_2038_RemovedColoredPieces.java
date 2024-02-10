@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.medium._2038_RemovedColoredPieces;
 
 public class _2038_RemovedColoredPieces {
     public static boolean winnerOfGame(String colors) {
