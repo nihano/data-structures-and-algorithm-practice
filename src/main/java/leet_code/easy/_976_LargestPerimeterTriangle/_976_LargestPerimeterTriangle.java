@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._976_LargestPerimeterTriangle;
 
 import java.util.Arrays;
 
