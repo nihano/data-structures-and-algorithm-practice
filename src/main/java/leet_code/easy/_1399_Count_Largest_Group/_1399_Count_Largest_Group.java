@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._1399_Count_Largest_Group;
 
 import java.util.HashMap;
 import java.util.HashSet;
