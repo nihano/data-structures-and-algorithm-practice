@@ -1,4 +1,4 @@
-package leet_code._203_RemoveLinkedListElements;
+package leet_code.easy._203_RemoveLinkedListElements;
 
 import lombok.Getter;
 
