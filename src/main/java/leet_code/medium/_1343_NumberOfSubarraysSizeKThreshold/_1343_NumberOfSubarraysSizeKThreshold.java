@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.medium._1343_NumberOfSubarraysSizeKThreshold;
 
 public class _1343_NumberOfSubarraysSizeKThreshold {
     public static int numOfSubarrays(int[] arr, int k, int threshold) {
