@@ -1,4 +1,4 @@
-package leet_code;
+package leet_code.easy._1207_UniqueNumberOfOccurrences;
 
 import java.util.HashMap;
 import java.util.HashSet;
