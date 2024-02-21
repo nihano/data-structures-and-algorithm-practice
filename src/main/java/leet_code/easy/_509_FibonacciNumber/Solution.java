@@ -1,7 +1,7 @@
 package leet_code.easy._509_FibonacciNumber;
 
 class Solution {
-    public int fib(int n) {
+    public static int fib(int n) {
         if(n<=1) return n;
         int prev=0;
         int next=1;
@@ -11,7 +11,10 @@ class Solution {
             prev=next;
             next=curr;
         }
-
         return next;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(fib(6));
     }
 }
